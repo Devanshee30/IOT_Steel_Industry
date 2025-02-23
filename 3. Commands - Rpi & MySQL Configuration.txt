@@ -1,0 +1,27 @@
+# Bash
+sudo apt update
+sudo apt install mysql-server
+
+# Bash
+sudo mysql_secure_installation
+# Set a root password and allow remote access.
+
+# SQL 
+CREATE DATABASE smart_meter_db;
+USE smart_meter_db;
+
+CREATE TABLE meter_readings (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+    usage_kWh FLOAT,
+    lagging_kVarh FLOAT,
+    leading_kVarh FLOAT,
+    lagging_pf FLOAT,
+    leading_pf FLOAT
+);
+
+
+
+
+
+
